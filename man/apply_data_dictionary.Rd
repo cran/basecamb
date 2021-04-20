@@ -4,7 +4,12 @@
 \alias{apply_data_dictionary}
 \title{Clean column names, types and levels}
 \usage{
-apply_data_dictionary(data, data_dictionary)
+apply_data_dictionary(
+  data,
+  data_dictionary,
+  na_action_default = "keep_NA",
+  print_coerced_NA = TRUE
+)
 }
 \arguments{
 \item{data}{data.frame to be cleaned}
@@ -18,27 +23,43 @@ apply_data_dictionary(data, data_dictionary)
 \item integer
 \item float
 \item factor
-\item date (can only confirm correct datatype assignment, not coerce other types into date)
+\item date
 }
 \item new_column_name : tidy column name. Can be left blank to keep the old column name
-\item coding (factor columns only) : character denoting old value (key) and new value (value) in a standardised fashion:
+\item coding (factor and date columns only):
+\itemize{
+\item factor columns: character denoting old value (key) and new value (value) in a standardised fashion:
 \itemize{
 \item key-value pairs are separated from other key-value-pairs by a comma (",")
 \item key and value of the same pair are separated by an equal sign ("=")
 \item quotations around individual keys and values are recommended for clarity, but do not affect functionality.
 \item all values will be coerced to type character, with the exception of "NA" being parsed as type NA
-\item using "default" as a key will assign the specified value to all current values that do not match any of the specified keys, including NA
-\item example coding: "'key1' = 'val1', 'key2' = 'val2', 'default' = NA"
+\item using "default" as a key will assign the specified value to all current values that do not match any of the specified keys, excluding NA
+\item using "NA" as a key will assign the specified value to all current NA values
+\item example coding: "'key1' = 'val1', 'key2' = 'val2', 'default' = 'Other', 'NA' = NA"
 \item if no coding is specified for a column, the coding remains unchanged
+}
+\item date columns: character denoting coding (see format argument in \code{as.Date})
 }
 \item Optional other columns (do not affect behaviour)
 }}
+
+\item{na_action_default}{character: Specify what to do with NA values. Defaults to 'keep_NA'. Options are:
+\itemize{
+\item 'keep_NA' NA values remain NA values
+\item 'assign_default' NA values are assigned the value specified as 'default'. Requires a 'default' value to be specified
+Can be overwritten for individal columns by specifying a value for key 'NA'
+}}
+
+\item{print_coerced_NA}{logical indicating whether a message specifying the
+location of NAs that are introduced by apply_data_dictionary() to data
+should be printed.}
 }
 \value{
 clean data.frame
 }
 \description{
-Use a data dictionary data.frame to apply the follwowing tidying steps to your data.frame:
+Use a data dictionary data.frame to apply the following tidying steps to your data.frame:
 \itemize{
 \item Remove superfluous columns
 \item Rename columns
