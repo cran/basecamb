@@ -1,5 +1,5 @@
-45ab8f1c79ece4511039ec72c3c418f7 *DESCRIPTION
-13aec30b2a6452fb1cd8562f95a6b9eb *NAMESPACE
+cd784c4a49d32f258bcaead29ab53c4f *DESCRIPTION
+646cc7d39cf93c6e58a4c2decfda01f3 *NAMESPACE
 60b497e28f7ea1376b5f1b964cb5cad9 *R/Fit_mult_impute_observed_outcome.R
 50f45b899a4c9272a6b7cb7aabd8717a *R/Model_formula_tools.R
 66c5346c80e96ff9c2d4fa0c03ac15dc *R/Tidy_names_types_factors.R
@@ -7,6 +7,7 @@ fce43490c5be9a24d0567b6348535da6 *R/apply_function_to_imputed_data.R
 21b5d564651b6dbf0756dd71cac6abf2 *R/cox.zph.mids.R
 4f973177cd05ad813641ca6889ad8b1c *R/filter_nth_entry.R
 e7243bbfa171704fe6a2c613fbcbebf0 *R/or_model_summary.R
+1799624e21407902096774a3f07cb7e6 *R/quantile_group.R
 6880cbfc8029e3306f2b2a5cf38634a8 *R/scale_continuous_predictors.R
 edd81db541482000d58c1f1d4768b9e5 *README.md
 dc6440dabbe9da408518623f8d11f2d5 *man/apply_data_dictionary.Rd
@@ -23,6 +24,7 @@ df097a9f0f10a379a4343579f0c1ecec *man/build_model_formula.Rd
 bef74a8ad9ca5a789e115448650ec3d2 *man/fit_mult_impute_obs_outcome.Rd
 5e55aa655170f4e893ebba3d932db884 *man/or_model_summary.Rd
 ce5fc92d8ddde0fc9fce929af2dd4cd7 *man/parse_date_columns.Rd
+2374501876b9d119aa4cf4ab7343be7e *man/quantile_group.Rd
 b10a021707471defde41d8333a79bd78 *man/remove_missing_from_mids.Rd
 0980c499d069fb17a53a1063b1c19e39 *man/scale_continuous_predictors.Rd
 9ac78080b3657ffaa1d146a07be7f1c5 *tests/testthat.R

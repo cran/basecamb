@@ -1,16 +1,16 @@
 Package: basecamb
 Type: Package
 Title: Utilities for Streamlined Data Import, Imputation and Modelling
-Version: 1.1.0
+Version: 1.1.1
 Authors@R: 
   c(person(given = "J. Peter",
            family = "Marquardt",
-           role = c("aut"),
+           role = c("aut", "cre"),
            email = "peter@kmarquardt.de",
            comment = c(ORCID = "0000-0002-5596-1357")),
     person(given = "Till D.",
            family = "Best",
-           role = c("aut", "cre"),
+           role = c("aut"),
            email = "till-best@gmx.de",
            comment = c(ORCID = "0000-0001-7323-827X")))
 Description: Provides functions streamlining the data analysis workflow: 
@@ -21,16 +21,16 @@ Imports: assertive.types, assertthat, dplyr, mice, Hmisc, survival,
         stats, purrr
 License: GPL (>= 3)
 Encoding: UTF-8
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1
 Suggests: testthat (>= 3.0.0), rms
 Config/testthat/edition: 3
 URL: https://CRAN.R-project.org/package=basecamb,
         https://github.com/codeblue-team/basecamb
 BugReports: https://github.com/codeblue-team/basecamb/issues
 NeedsCompilation: no
-Packaged: 2022-02-06 20:30:16 UTC; Till-
-Author: J. Peter Marquardt [aut] (<https://orcid.org/0000-0002-5596-1357>),
-  Till D. Best [aut, cre] (<https://orcid.org/0000-0001-7323-827X>)
-Maintainer: Till D. Best <till-best@gmx.de>
+Packaged: 2023-01-21 09:28:35 UTC; Till-
+Author: J. Peter Marquardt [aut, cre] (<https://orcid.org/0000-0002-5596-1357>),
+  Till D. Best [aut] (<https://orcid.org/0000-0001-7323-827X>)
+Maintainer: J. Peter Marquardt <peter@kmarquardt.de>
 Repository: CRAN
-Date/Publication: 2022-02-06 21:00:05 UTC
+Date/Publication: 2023-01-22 16:10:02 UTC
